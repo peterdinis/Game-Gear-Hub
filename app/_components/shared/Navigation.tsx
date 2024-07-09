@@ -26,22 +26,17 @@ const Navigation: FC = () => {
               <div className="text-gray-600 dark:text-gray-300 lg:pr-4">
                 <ul className="space-y-6 tracking-wide font-medium text-base lg:text-sm lg:flex lg:space-y-0">
                   <li>
-                    <Link href="#" className="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight">
+                    <Link href="/" className="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight">
                       <span>Home</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight">
-                      <span>About US</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight">
+                    <Link href="/games" className="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight">
                       <span>Games</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="md:px-4 transition hover:text-primary dark:hover:text-primaryLight flex items-center space-x-1">
+                    <Link href="/cart" className="md:px-4 transition hover:text-primary dark:hover:text-primaryLight flex items-center space-x-1">
                       <ShoppingCart />
                       <span className="ml-4">0</span>
                     </Link>
