@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FC } from "react";
 import { Computer, ShoppingCart } from 'lucide-react';
+import ThemeButton from "./ThemeButton";
 
 const Navigation: FC = () => {
   return (
@@ -54,6 +55,11 @@ const Navigation: FC = () => {
                 <Link href="#" className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary dark:before:bg-primaryLight before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
                   <span className="relative text-sm font-semibold text-white dark:text-gray-900">Login</span>
                 </Link>
+                <div className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
+                  <span className="relative text-sm font-semibold text-white dark:text-gray-900">
+                    <ThemeButton />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
