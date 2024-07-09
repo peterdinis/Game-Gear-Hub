@@ -11,12 +11,12 @@ const Navigation: FC = () => {
         <div className="xl:container m-auto px-6 md:px-12">
           <div className="flex flex-wrap items-center justify-between gap-6 md:py-3 md:gap-0">
             <div className="w-full flex justify-between lg:w-auto">
-              <a href="#" aria-label="logo" className="flex space-x-2 items-center">
+              <Link href="/" aria-label="logo" className="flex space-x-2 items-center">
                 <div aria-hidden="true" className="flex space-x-1">
                   <Computer />
                 </div>
                 <span className="text-base font-bold text-gray-600 dark:text-white">Game-Gear-Hub</span>
-              </a>
+              </Link>
               <label htmlFor="hbr" className="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden">
                 <div aria-hidden="true" className="m-auto h-0.5 w-6 rounded bg-gray-900 dark:bg-gray-300 transition duration-300"></div>
                 <div aria-hidden="true" className="m-auto mt-2 h-0.5 w-6 rounded bg-gray-900 dark:bg-gray-300 transition duration-300"></div>
