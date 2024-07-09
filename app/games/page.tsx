@@ -1,11 +1,8 @@
 import { NextPage } from "next";
+import GamesWrapper from "../_components/games/GamesWrapper";
 
 const GamesPage: NextPage = () => {
-    return (
-        <>
-        eorororo
-        </>
-    )
+    return <GamesWrapper />
 }
 
 export default GamesPage;
