@@ -1,78 +1,46 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const Navigation: FC = () => {
   return (
-    <header className="header">
-      <div className="overlay" data-overlay></div>
-
-      <div className="container">
+    <header className="header bg-black text-white">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <a href="#" className="logo">
-          image
+          <img src="/logo.png" alt="GameX" className="h-8" />
         </a>
-
-        <button className="nav-open-btn" data-nav-open-btn>
-          rrrrr
-        </button>
-
-        <nav className="navbar" data-nav>
-          <div className="navbar-top">
-            <a href="#" className="logo">
-              image
-            </a>
-
-            <button className="nav-close-btn" data-nav-close-btn>
-              rrrr
-            </button>
-          </div>
-
-          <ul className="navbar-list">
-            <li>
-              <a href="#hero" className="navbar-link">
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a href="#about" className="navbar-link">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a href="#tournament" className="navbar-link">
-                Tournament
-              </a>
-            </li>
-
-            <li>
-              <a href="#team" className="navbar-link">
-                Team
-              </a>
-            </li>
-
-            <li>
-              <a href="#gears" className="navbar-link">
-                Gears
-              </a>
-            </li>
-
-            <li>
-              <a href="#contact" className="navbar-link">
-                Contact
-              </a>
-            </li>
-          </ul>
+        <nav className="hidden md:flex space-x-6">
+          <a href="#hero" className="navbar-link">
+            Home
+          </a>
+          <a href="#about" className="navbar-link">
+            About
+          </a>
+          <a href="#tournament" className="navbar-link">
+            Tournament
+          </a>
+          <a href="#team" className="navbar-link">
+            Team
+          </a>
+          <a href="#gears" className="navbar-link">
+            Gears
+          </a>
+          <a href="#contact" className="navbar-link">
+            Contact
+          </a>
         </nav>
-
-        <div className="header-actions">
-          <button className="search">rrrrrrrrr</button>
-
-          <button className="btn-sign_in">
-            <div className="icon-box">rrrrrrrrr</div>
-
+        <div className="header-actions flex items-center space-x-4">
+          <button className="search text-xl">
+            rrr
+          </button>
+          <button className="btn-sign_in flex items-center space-x-2 px-4 py-2 bg-orange-500 text-black">
+            <div className="icon-box">
+            rrr
+            </div>
             <span>Log-in</span>
           </button>
         </div>
+        <button className="nav-open-btn md:hidden">
+         rrr
+        </button>
       </div>
     </header>
   );
