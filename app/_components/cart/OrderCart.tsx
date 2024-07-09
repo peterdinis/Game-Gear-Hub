@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const OrderCart: FC = () => {
     return (
-        <div className=" col-span-12 xl:col-span-4 bg-gray-50 w-full max-xl:px-6 max-w-3xl xl:max-w-lg mx-auto lg:pl-8 py-24">
+        <div className=" col-span-12 xl:col-span-4 bg-gray-50 dark:bg-prim w-full max-xl:px-6 max-w-3xl xl:max-w-lg mx-auto lg:pl-8 py-24">
         <h2 className="font-manrope font-bold text-3xl leading-10 text-black pb-8 border-b border-gray-300">
           Order Summary
         </h2>
