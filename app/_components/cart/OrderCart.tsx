@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { FC } from "react";
 
 const OrderCart: FC = () => {
@@ -16,9 +19,9 @@ const OrderCart: FC = () => {
             </p>
           </div>
           <form>
-            <label className="flex  items-center mb-1.5 text-gray-600 text-sm font-medium">
+            <Label className="flex  items-center mb-1.5 text-gray-600 text-sm font-medium">
               Shipping
-            </label>
+            </Label>
             <div className="flex pb-6">
               <div className="relative w-full">
                 <div className=" absolute left-0 top-0 py-3 px-4">
@@ -26,7 +29,7 @@ const OrderCart: FC = () => {
                     Second Delivery
                   </span>
                 </div>
-                <input
+                <Input
                   type="text"
                   className="block w-full h-11 pr-10 pl-36 min-[500px]:pl-52 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-gray-400"
                   placeholder="$5.00"
@@ -54,49 +57,6 @@ const OrderCart: FC = () => {
                     ></path>
                   </svg>
                 </button>
-                <div
-                  id="dropdown-delivery"
-                  aria-labelledby="dropdown-delivery"
-                  className="z-20 hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-10 bg-white right-0"
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdown-button"
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Shopping
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Images
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        News
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Finance
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
             <label className="flex items-center mb-1.5 text-gray-400 text-sm font-medium">
@@ -133,66 +93,24 @@ const OrderCart: FC = () => {
                     ></path>
                   </svg>
                 </button>
-                <div
-                  id="dropdown"
-                  className="absolute top-10 right-0 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdown-button"
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Shopping
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Images
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        News
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Finance
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
             <div className="flex items-center border-b border-gray-200">
-              <button className="rounded-lg w-full bg-black py-2.5 px-4 text-white text-sm font-semibold text-center mb-8 transition-all duration-500 hover:bg-black/80">
+              <Button className="rounded-lg w-full bg-black py-2.5 px-4 text-white text-sm font-semibold text-center mb-8 transition-all duration-500 hover:bg-black/80">
                 Apply
-              </button>
+              </Button>
             </div>
             <div className="flex items-center justify-between py-8">
               <p className="font-medium text-xl leading-8 text-black">
                 3 Items
               </p>
-              <p className="font-semibold text-xl leading-8 text-indigo-600">
+              <Label className="font-semibold text-xl leading-8 text-indigo-600">
                 $485.00
-              </p>
+              </Label>
             </div>
-            <button className="w-full text-center bg-indigo-600 rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700">
+            <Button className="w-full text-center bg-indigo-600 rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700">
               Checkout
-            </button>
+            </Button>
           </form>
         </div>
       </div>
