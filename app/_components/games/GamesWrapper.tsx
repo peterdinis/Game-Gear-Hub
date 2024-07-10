@@ -6,9 +6,6 @@ const GamesWrapper: FC = () => {
     return (
         <>
             <Header text="Our Games" />
-            <Input 
-                placeholder="Search..."
-            />
         </>
     )
 }
