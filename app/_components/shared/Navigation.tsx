@@ -29,7 +29,7 @@ const Navigation: FC = () => {
                                 >
                                     <Computer />
                                 </div>
-                                <span className='text-base text-gray-600 font-bold dark:text-white'>
+                                <span className='text-base font-bold text-gray-600 dark:text-white'>
                                     Game-Gear-Hub
                                 </span>
                             </a>
