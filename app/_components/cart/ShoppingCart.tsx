@@ -5,12 +5,12 @@ import { Minus, Plus } from 'lucide-react';
 const ShoppingCart: FC = () => {
     return (
         <>
-            <div className='sm:mt-10 col-span-12 w-full pb-8 pt-14 max-xl:mx-auto max-xl:max-w-3xl lg:py-24 lg:pr-8 xl:col-span-8'>
+            <div className='col-span-12 w-full pb-8 pt-14 max-xl:mx-auto max-xl:max-w-3xl sm:mt-10 lg:py-24 lg:pr-8 xl:col-span-8'>
                 <div className='flex items-center justify-between border-b border-gray-300 pb-8'>
                     <h2 className='font-manrope text-3xl font-bold leading-10 text-black dark:text-blue-50'>
                         Shopping Cart
                     </h2>
-                    <h2 className='sm:mr-4 font-manrope text-xl font-bold leading-8 text-gray-600 dark:text-blue-50'>
+                    <h2 className='font-manrope text-xl font-bold leading-8 text-gray-600 dark:text-blue-50 sm:mr-4'>
                         3 Items
                     </h2>
                 </div>
@@ -62,14 +62,14 @@ const ShoppingCart: FC = () => {
                         </div>
                         <div className='flex h-full items-center max-md:mt-3 max-[500px]:justify-center'>
                             <div className='flex h-full items-center'>
-                                <button className='group flex items-center justify-center rounded-l-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-gray-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300'>
-                                    <Minus />
+                                <button className='group flex items-center justify-center rounded-l-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 max-sm:px-3 max-sm:py-2'>
+                                    <Minus className='h-4 w-4 max-sm:h-3 max-sm:w-3' />
                                 </button>
-                                <span className='w-full min-w-[60px] max-w-[73px] border-y border-gray-200 bg-transparent py-[15px] text-center text-lg font-semibold text-gray-900 outline-none placeholder:text-gray-900 dark:text-blue-50'>
+                                <span className='w-full min-w-[60px] max-w-[73px] border-y border-gray-200 bg-transparent py-[15px] text-center text-lg font-semibold text-gray-900 outline-none placeholder:text-gray-900 dark:text-blue-50 max-sm:min-w-[40px] max-sm:max-w-[50px] max-sm:py-2 max-sm:text-base'>
                                     1
                                 </span>
-                                <button className='group flex items-center justify-center rounded-r-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-gray-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300'>
-                                    <Plus />
+                                <button className='group flex items-center justify-center rounded-r-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 max-sm:px-3 max-sm:py-2'>
+                                    <Plus className='h-4 w-4 max-sm:h-3 max-sm:w-3' />
                                 </button>
                             </div>
                         </div>
@@ -107,14 +107,14 @@ const ShoppingCart: FC = () => {
                         </div>
                         <div className='flex h-full items-center max-md:mt-3 max-[500px]:justify-center'>
                             <div className='flex h-full items-center'>
-                                <button className='group flex items-center justify-center rounded-l-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-gray-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300'>
-                                    <Minus />
+                                <button className='group flex items-center justify-center rounded-l-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 max-sm:px-3 max-sm:py-2'>
+                                    <Minus className='h-4 w-4 max-sm:h-3 max-sm:w-3' />
                                 </button>
-                                <span className='w-full min-w-[60px] max-w-[73px] border-y border-gray-200 bg-transparent py-[15px] text-center text-lg font-semibold text-gray-900 outline-none placeholder:text-gray-900 dark:text-blue-50'>
+                                <span className='w-full min-w-[60px] max-w-[73px] border-y border-gray-200 bg-transparent py-[15px] text-center text-lg font-semibold text-gray-900 outline-none placeholder:text-gray-900 dark:text-blue-50 max-sm:min-w-[40px] max-sm:max-w-[50px] max-sm:py-2 max-sm:text-base'>
                                     1
                                 </span>
-                                <button className='group flex items-center justify-center rounded-r-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-gray-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300'>
-                                    <Plus />
+                                <button className='group flex items-center justify-center rounded-r-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 max-sm:px-3 max-sm:py-2'>
+                                    <Plus className='h-4 w-4 max-sm:h-3 max-sm:w-3' />
                                 </button>
                             </div>
                         </div>
@@ -152,14 +152,14 @@ const ShoppingCart: FC = () => {
                         </div>
                         <div className='flex h-full items-center max-md:mt-3 max-[500px]:justify-center'>
                             <div className='flex h-full items-center'>
-                                <button className='group flex items-center justify-center rounded-l-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-gray-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300'>
-                                    <Minus />
+                                <button className='group flex items-center justify-center rounded-l-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 max-sm:px-3 max-sm:py-2'>
+                                    <Minus className='h-4 w-4 max-sm:h-3 max-sm:w-3' />
                                 </button>
-                                <span className='w-full min-w-[60px] max-w-[73px] border-y border-gray-200 bg-transparent py-[15px] text-center text-lg font-semibold text-gray-900 outline-none placeholder:text-gray-900 dark:text-blue-50'>
+                                <span className='w-full min-w-[60px] max-w-[73px] border-y border-gray-200 bg-transparent py-[15px] text-center text-lg font-semibold text-gray-900 outline-none placeholder:text-gray-900 dark:text-blue-50 max-sm:min-w-[40px] max-sm:max-w-[50px] max-sm:py-2 max-sm:text-base'>
                                     1
                                 </span>
-                                <button className='group flex items-center justify-center rounded-r-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-gray-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300'>
-                                    <Plus />
+                                <button className='group flex items-center justify-center rounded-r-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 max-sm:px-3 max-sm:py-2'>
+                                    <Plus className='h-4 w-4 max-sm:h-3 max-sm:w-3' />
                                 </button>
                             </div>
                         </div>
@@ -197,14 +197,14 @@ const ShoppingCart: FC = () => {
                         </div>
                         <div className='flex h-full items-center max-md:mt-3 max-[500px]:justify-center'>
                             <div className='flex h-full items-center'>
-                                <button className='group flex items-center justify-center rounded-l-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-gray-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300'>
-                                    <Minus />
+                                <button className='group flex items-center justify-center rounded-l-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 max-sm:px-3 max-sm:py-2'>
+                                    <Minus className='h-4 w-4 max-sm:h-3 max-sm:w-3' />
                                 </button>
-                                <span className='w-full min-w-[60px] max-w-[73px] border-y border-gray-200 bg-transparent py-[15px] text-center text-lg font-semibold text-gray-900 outline-none placeholder:text-gray-900 dark:text-blue-50'>
+                                <span className='w-full min-w-[60px] max-w-[73px] border-y border-gray-200 bg-transparent py-[15px] text-center text-lg font-semibold text-gray-900 outline-none placeholder:text-gray-900 dark:text-blue-50 max-sm:min-w-[40px] max-sm:max-w-[50px] max-sm:py-2 max-sm:text-base'>
                                     1
                                 </span>
-                                <button className='group flex items-center justify-center rounded-r-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-gray-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300'>
-                                    <Plus />
+                                <button className='group flex items-center justify-center rounded-r-xl border border-gray-200 px-5 py-[18px] shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-300 hover:bg-gray-50 hover:shadow-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 max-sm:px-3 max-sm:py-2'>
+                                    <Plus className='h-4 w-4 max-sm:h-3 max-sm:w-3' />
                                 </button>
                             </div>
                         </div>
