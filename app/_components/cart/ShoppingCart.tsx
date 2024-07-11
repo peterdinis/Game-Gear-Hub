@@ -5,12 +5,12 @@ import { Minus, Plus } from 'lucide-react';
 const ShoppingCart: FC = () => {
     return (
         <>
-            <div className='col-span-12 w-full pb-8 pt-14 max-xl:mx-auto max-xl:max-w-3xl lg:py-24 lg:pr-8 xl:col-span-8'>
+            <div className='sm:mt-10 col-span-12 w-full pb-8 pt-14 max-xl:mx-auto max-xl:max-w-3xl lg:py-24 lg:pr-8 xl:col-span-8'>
                 <div className='flex items-center justify-between border-b border-gray-300 pb-8'>
                     <h2 className='font-manrope text-3xl font-bold leading-10 text-black dark:text-blue-50'>
                         Shopping Cart
                     </h2>
-                    <h2 className='font-manrope text-xl font-bold leading-8 text-gray-600 dark:text-blue-50'>
+                    <h2 className='sm:mr-4 font-manrope text-xl font-bold leading-8 text-gray-600 dark:text-blue-50'>
                         3 Items
                     </h2>
                 </div>
