@@ -4,6 +4,7 @@ import './globals.css';
 import Navigation from './_components/shared/Navigation';
 import ThemeProvider from './_components/shared/providers/ThemeProvider';
 import QueryProvider from './_store/QueryClientProvider';
+import ScrollToTop from './_components/shared/ScrollToTop';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
                     <QueryProvider>
                         <Navigation />
                         {children}
+                        <ScrollToTop />
                     </QueryProvider>
                 </ThemeProvider>
             </body>
