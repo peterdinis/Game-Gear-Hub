@@ -9,29 +9,23 @@ const Navigation: FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-background shadow-sm">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="#" className="flex items-center gap-2" prefetch={false}>
+        <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <GamepadIcon className="h-6 w-6 text-primary" />
-          <span className="text-lg font-semibold">GameShop</span>
+          <span className="text-lg font-semibold">Game Gear Hub</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
-          <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
-            Action
+          <Link href="/games" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+            Games
           </Link>
-          <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
-            Adventure
+          <Link href="/login" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+            Sign In
           </Link>
-          <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
-            Simulation
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
-            RPG
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
-            Indie
+          <Link href="/register" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+            Sign Up
           </Link>
         </nav>
         <div className="relative hidden items-center gap-4 md:flex">
-          <Link href="#" className="relative" prefetch={false}>
+          <Link href="/cart" className="relative" prefetch={false}>
             <ShoppingCartIcon className="h-6 w-6 text-muted-foreground" />
             <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-xs text-primary-foreground">
               3
