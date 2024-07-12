@@ -1,97 +1,167 @@
-import Link from 'next/link';
-import { FC } from 'react';
-import { Computer, ShoppingCart } from 'lucide-react';
-import ThemeButton from './ThemeButton';
+import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button"
+import { FC, SVGProps } from "react"
+
 
 const Navigation: FC = () => {
-    return (
-        <header>
-            <input
-                type="checkbox"
-                name="hbr"
-                id="hbr"
-                className="hbr peer"
-                hidden
-                aria-hidden="true"
-            />
-            <nav className="navbar peer-checked:navbar-active fixed z-20 w-full bg-white/80 shadow-md shadow-gray-600/5 backdrop-blur dark:bg-gray-900/80 dark:shadow-none md:relative md:bg-transparent">
-                <div className="m-auto px-6 xl:container md:px-12">
-                    <div className="flex flex-wrap items-center justify-between gap-6 md:gap-0 md:py-3">
-                        <div className="flex w-full justify-between lg:w-auto">
-                            <a
-                                href="#"
-                                aria-label="logo"
-                                className="flex items-center space-x-2"
-                            >
-                                <div aria-hidden="true" className="flex space-x-1">
-                                    <Computer />
-                                </div>
-                                <span className="text-base font-bold text-gray-600 dark:text-white">
-                                    Game-Gear-Hub
-                                </span>
-                            </a>
-                            <label
-                                htmlFor="hbr"
-                                className="peer-checked:hamburger relative z-20 -mr-6 block cursor-pointer p-6 lg:hidden"
-                            >
-                                <div
-                                    aria-hidden="true"
-                                    className="m-auto h-0.5 w-6 rounded bg-gray-900 transition duration-300 dark:bg-gray-300"
-                                ></div>
-                                <div
-                                    aria-hidden="true"
-                                    className="m-auto mt-2 h-0.5 w-6 rounded bg-gray-900 transition duration-300 dark:bg-gray-300"
-                                ></div>
-                            </label>
-                        </div>
-                        <div className="navmenu mb-16 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-gray-100 bg-white p-6 shadow-2xl shadow-gray-300/20 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none md:flex-nowrap lg:m-0 lg:flex lg:w-7/12 lg:space-y-0 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
-                            <div className="text-gray-600 dark:text-gray-300 lg:pr-4">
-                                <ul className="space-y-6 text-base font-medium tracking-wide lg:flex lg:space-y-0 lg:text-sm">
-                                    <li>
-                                        <Link href="/" className="dark:hover:text-primaryLight block transition hover:text-primary md:px-4">
-                                            <span>Home</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/games" className="dark:hover:text-primaryLight block transition hover:text-primary md:px-4">
-                                            <span>Games</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/cart" className="dark:hover:text-primaryLight flex items-center space-x-1 transition hover:text-primary md:px-4">
-                                            <ShoppingCart />
-                                            <span className="ml-4">0</span>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="-ml-1 flex w-full flex-col space-y-2 border-primary/10 dark:border-gray-700 sm:flex-row md:w-max lg:space-y-0 lg:border-l">
-                                <Link
-                                    href="/sign-up"
-                                    className="dark:focus:before:bg-primaryLight/10 relative ml-auto flex h-9 items-center justify-center before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 focus:before:bg-primary/10 active:duration-75 active:before:scale-95 sm:px-6"
-                                >
-                                    <span className="dark:text-primaryLight relative text-sm font-semibold text-primary">
-                                        Sign Up
-                                    </span>
-                                </Link>
-                                <Link
-                                    href="/sign-in"
-                                    className="dark:before:bg-primaryLight relative ml-4 flex h-9 items-center justify-center before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:px-6"
-                                >
-                                    <span className="relative text-sm font-semibold text-white dark:text-gray-900">
-                                        Login
-                                    </span>
-                                </Link>
-                                <div className="relative ml-auto flex h-9 items-center justify-center before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:px-6">
-                                    <ThemeButton />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    );
-};
+  return (
+    <header className="sticky top-0 z-50 w-full bg-background shadow-sm">
+      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+        <Link href="/" className="flex items-center gap-2" prefetch={false}>
+          <GamepadIcon className="h-6 w-6 text-primary" />
+          <span className="text-lg font-semibold">Game Gear Hub</span>
+        </Link>
+        <nav className="hidden items-center gap-6 md:flex">
+          <Link href="/games" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+            Games
+          </Link>
+          <Link href="/login" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+            Sign In
+          </Link>
+          <Link href="/register" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+            Sign Up
+          </Link>
+        </nav>
+        <div className="relative hidden items-center gap-4 md:flex">
+          <Link href="/cart" className="relative" prefetch={false}>
+            <ShoppingCartIcon className="h-6 w-6 text-muted-foreground" />
+            <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-xs text-primary-foreground">
+              3
+            </Badge>
+          </Link>
+        </div>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon" className="md:hidden">
+              <MenuIcon className="h-6 w-6" />
+              <span className="sr-only">Toggle navigation</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="left" className="md:hidden">
+            <div className="flex flex-col items-start gap-4 p-4">
+              <Link href="#" className="flex items-center gap-2" prefetch={false}>
+                <GamepadIcon className="h-6 w-6 text-primary" />
+                <span className="text-lg font-semibold">GameShop</span>
+              </Link>
+              <nav className="grid gap-2">
+                <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+                  Action
+                </Link>
+                <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+                  Adventure
+                </Link>
+                <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+                  Simulation
+                </Link>
+                <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+                  RPG
+                </Link>
+                <Link href="#" className="text-sm font-medium hover:text-primary transition-colors" prefetch={false}>
+                  Indie
+                </Link>
+              </nav>
+              <Link href="#" className="relative" prefetch={false}>
+                <ShoppingCartIcon className="h-6 w-6 text-muted-foreground" />
+                <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-xs text-primary-foreground">
+                  3
+                </Badge>
+              </Link>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
+  )
+}
+
+function GamepadIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="6" x2="10" y1="12" y2="12" />
+      <line x1="8" x2="8" y1="10" y2="14" />
+      <line x1="15" x2="15.01" y1="13" y2="13" />
+      <line x1="18" x2="18.01" y1="11" y2="11" />
+      <rect width="20" height="12" x="2" y="6" rx="2" />
+    </svg>
+  )
+}
+
+
+function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </svg>
+  )
+}
+
+
+function ShoppingCartIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="8" cy="21" r="1" />
+      <circle cx="19" cy="21" r="1" />
+      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+    </svg>
+  )
+}
+
+
+function XIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  )
+}
 
 export default Navigation;
