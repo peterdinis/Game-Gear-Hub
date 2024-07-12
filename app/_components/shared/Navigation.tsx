@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { FC, SVGProps } from "react"
-
+import ThemeButton from "./ThemeButton"
 
 const Navigation: FC = () => {
   return (
@@ -31,6 +31,7 @@ const Navigation: FC = () => {
               3
             </Badge>
           </Link>
+          <ThemeButton />
         </div>
         <Sheet>
           <SheetTrigger asChild>
