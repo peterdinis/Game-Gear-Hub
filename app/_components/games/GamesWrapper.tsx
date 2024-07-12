@@ -3,8 +3,8 @@
 import { FC, useMemo, useState } from "react";
 import { games } from "./gamesData";
 import Header from '../shared/Header';
-import FilterSection from "./FilterSection";
 import GameCard from "./GameCard";
+import FilterSection from "./filters/FilterSection";
 
 const GamesWrapper: FC = () => {
   const [filters, setFilters] = useState({

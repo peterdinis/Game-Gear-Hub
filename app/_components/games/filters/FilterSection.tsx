@@ -1,7 +1,7 @@
 import { FC } from "react";
-import GenreFilter from "./filters/GenreFilter";
-import PriceFilter from "./filters/PriceFilter";
-import RatingFilter from "./filters/RantingFilter";
+import GenreFilter from "./GenreFilter";
+import PriceFilter from "./PriceFilter";
+import RatingFilter from "./RantingFilter";
 
 interface FilterSectionProps {
   filters: any;
