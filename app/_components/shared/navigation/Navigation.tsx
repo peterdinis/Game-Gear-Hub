@@ -82,14 +82,14 @@ const Navigation: FC = () => {
                                     Games
                                 </Link>
                                 <Link
-                                    href='/login'
+                                    href='/sign-in'
                                     className='text-sm font-medium transition-colors hover:text-primary'
                                     prefetch={false}
                                 >
                                     Sign In
                                 </Link>
                                 <Link
-                                    href='/register'
+                                    href='/sign-up'
                                     className='text-sm font-medium transition-colors hover:text-primary'
                                     prefetch={false}
                                 >
