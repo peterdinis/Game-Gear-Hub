@@ -131,6 +131,40 @@ html::-webkit-scrollbar-thumb {
     .navbar-active div:first-child div:first-child div:last-child {
         @apply block lg:flex;
     }
+
+    .header {
+      @apply relative flex justify-between gap-[4rem];
+    }
+    .header-left-side , .header-right-side {
+      @apply flex flex-1;
+    }
+    .header-left-side {
+      @apply flex flex-col pt-12 pb-4 justify-between
+    }
+    .header-content {
+      @apply flex flex-col justify-center gap-10
+    }
+    .header-content span {
+       @apply bg-[#e1edff] h-[40px] w-[120px] font-semibold justify-center items-center rounded-[6px] flex justify-items-center text-[#0000FF] ;
+    }
+    .header-content h1 {
+      @apply scroll-m-20 text-[#212121] font-bold text-4xl lg:text-5xl leading-[55px] tracking-tighter
+    }
+    .header-content p {
+      @apply font-normal text-[1rem] leading-6  text-[#666666] w-[70%]
+    }
+    .header-content .btn {
+      @apply p-4 text-base  ;
+    }
+    .header-featured {
+      @apply grid grid-cols-2 gap-4  md:grid-cols-3 lg:grid-cols-4;
+    }
+    .header-circle {
+      @apply w-[600px] h-[600px] rounded-full bg-[#ffece3]
+    }
+    .header-circle .header-img {
+      @apply absolute top-[-5%]
+    }
 }
 
 @layer base {
