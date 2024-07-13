@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface GameCardProps {
   game: any;
@@ -8,7 +9,11 @@ interface GameCardProps {
 
 const GameCard: FC<GameCardProps> = ({ game }) => {
   return (
-    <div className="bg-background rounded-lg overflow-hidden shadow-lg">
+    <motion.div
+      className="bg-background rounded-lg overflow-hidden shadow-lg"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
       <img
         src="/placeholder.svg"
         alt={game.title}
@@ -24,11 +29,13 @@ const GameCard: FC<GameCardProps> = ({ game }) => {
             <Star className="w-4 h-4 fill-primary" />
             <span className="text-sm font-medium">{game.rating}</span>
           </div>
-          <div className="text-lg font-bold">{game.price === 0 ? "Free" : `$${game.price}`}</div>
+          <div className="text-lg font-bold">
+            {game.price === 0 ? "Free" : `$${game.price}`}
+          </div>
         </div>
         <Button className="w-full mt-4">Buy Now</Button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
