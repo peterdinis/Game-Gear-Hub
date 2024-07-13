@@ -5,6 +5,7 @@ import Navigation from './_components/shared/navigation/Navigation';
 import ThemeProvider from './_components/shared/providers/ThemeProvider';
 import QueryProvider from './_store/QueryClientProvider';
 import ScrollToTop from './_components/shared/ScrollToTop';
+import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
                     <QueryProvider>
                         <Navigation />
                         {children}
+                        <Toaster />
                         <ScrollToTop />
                     </QueryProvider>
                 </ThemeProvider>
